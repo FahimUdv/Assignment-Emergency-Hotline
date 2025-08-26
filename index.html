@@ -34,16 +34,16 @@
     </header>
     
     <section class="hero-container">
-        <div class="py-10 flex flex-col bg-gradient-to-r from-[#013223] from-0% via-[#006747] via-50% to-[#013223] to-100% ... ">
+        <div class="py-6 md:py-10 flex flex-col bg-gradient-to-r from-[#013223] from-0% via-[#006747] via-50% to-[#013223] to-100% ... ">
             <img src="./assets/logo-dark.png" class="w-30 mx-auto" alt="">
-            <h1 class="mx-auto text-white text-[40px] font-semibold py-6">জরুরি সেবা ডিরেক্টরি</h1>
-            <h3 class="mx-auto text-white text-[20px] font-semibold">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</h3>
+            <h1 class="mx-auto text-white text-2xl md:text-[40px] font-semibold py-4 md:py-6">জরুরি সেবা ডিরেক্টরি</h1>
+            <h3 class="mx-auto text-white text-[12px] md:text-[20px] font-semibold text-center">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</h3>
         </div>
     </section>
 
-    <section class="bg-[#e4ffea] px-16 mx-auto py-12 grid grid-cols-12 gap-8">
+    <section class="bg-[#e4ffea] px-4 md:px-16 mx-auto py-10 grid md:grid-cols-12 gap-6 md:gap-8">
         
-        <section class="col-span-9 grid grid-cols-3 gap-8">
+        <section class="md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 order-2 md:order-1">
 
             <section class="">
                 <div class="card bg-base-100 shadow-lg rounded-xl">
@@ -64,7 +64,7 @@
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
                         <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
-                        <button class="btn bg-[#00A63E] text-white rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button onclick="showBDTime()" class="btn bg-[#00A63E] text-white rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
             </section>
@@ -117,7 +117,7 @@
                 </div>
             </section>
 
-            <section class="py-1">
+            <section class="md:py-1">
                 <div class="card bg-base-100 shadow-lg rounded-xl">
                     <div class="flex justify-between">
                         <figure class="w-30">
@@ -141,7 +141,7 @@
                 </div>
             </section>
 
-            <section class="py-1">
+            <section class="md:py-1">
                 <div class="card bg-base-100 shadow-lg rounded-xl">
                     <div class="flex justify-between">
                         <figure class="w-30">
@@ -165,7 +165,7 @@
                 </div>
             </section>
 
-            <section class="py-1">
+            <section class="md:py-1">
                 <div class="card bg-base-100 shadow-lg rounded-xl">
                     <div class="flex justify-between">
                         <figure class="w-30">
@@ -189,7 +189,7 @@
                 </div>
             </section>
 
-            <section class="py-1">
+            <section class="md:py-1">
                 <div class="card bg-base-100 shadow-lg rounded-xl">
                     <div class="flex justify-between">
                         <figure class="w-30">
@@ -213,7 +213,7 @@
                 </div>
             </section>
 
-            <section class="py-1">
+            <section class="md:py-1">
                 <div class="card bg-base-100 shadow-lg rounded-xl">
                     <div class="flex justify-between">
                         <figure class="w-30">
@@ -237,7 +237,7 @@
                 </div>
             </section>
 
-            <section class="py-1">
+            <section class="md:py-1">
                 <div class="card bg-base-100 shadow-lg rounded-xl">
                     <div class="flex justify-between">
                         <figure class="w-30">
@@ -263,13 +263,24 @@
 
         </section>
         
-        <aside class="col-span-3">
-            <div class="card bg-base-100 shadow-lg rounded-xl min-h-48">
-                <div class="flex justify-between p-6 items-center">
-                    <h1 class="font-semibold text-xl"><i class="fa-regular fa-clock"></i> Call History</h1>
-                <button class="bg-[#00A63E] px-6 py-[10px] rounded-3xl text-white font-semibold">Clear</button>
+        <aside class="md:col-span-3 order-1 md:order-2">
+            <div class="card bg-base-100 shadow-lg rounded-xl">
+                <div class="flex justify-between p-4 md:p-6 items-center">
+                    <h1 class="font-semibold text-lg md:text-xl"><i class="fa-regular fa-clock"></i> Call History</h1>
+                    <button class="bg-[#00A63E] px-4 py-[6px] md:px-6 md:py-[10px] rounded-3xl text-white font-semibold">Clear</button>
+                </div>
+
+                <div class="flex justify-between mx-2 md:mx-6 mb-6 px-4 py-2 items-center bg-[#FAFAFA] rounded-lg">
+                    <div>
+                        <p class="text-base md:text-lg py-1 font-semibold">জাতীয় জরুরি সেবা</p>
+                        <p class="md:text-lg">999</p>
+                    </div>
+                    <div>
+                        <p id="bdtime" class="font-semibold text-lg me-2"></p>
+                    </div>
                 </div>
             </div>
+            
         </aside>
 
     </section>
@@ -280,5 +291,12 @@
 
 
     <script src="./script/script.js"></script>
+    <script>
+        function showBDTime() {
+            let now = new Date();
+            let bdTime = now.toLocaleTimeString("en-US", { timeZone: "Asia/Dhaka" });
+            document.getElementById("bdtime").innerText = bdTime;
+        }
+    </script>
 </body>
 </html>
