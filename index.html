@@ -19,11 +19,11 @@
             
             <div class="flex items-center">
                 <div class="flex items-center bg-[#e4ffea] px-2 md:px-6 py-[4px] md:py-[10px] rounded-3xl">
-                    <h2 class="md:font-extrabold md:text-lg">22</h2>
+                    <h2 id="heart-count" class="md:font-extrabold md:text-lg">0</h2>
                     <img src="./assets/heart.png" class="w-6 md:w-8 ps-2" alt="">
                 </div>
                 <div class="flex items-center bg-[#e4ffea] px-2 md:px-6 py-[4px] md:py-[10px] rounded-3xl mx-2 md:mx-6">
-                    <h2 class="md:font-extrabold md:text-lg">33</h2>
+                    <h2 id="coin-count" class="md:font-extrabold md:text-lg">100</h2>
                     <img src="./assets/coin.png" class="w-6 md:w-8 ps-2" alt="">
                 </div>
                 <div class="flex items-center bg-[#00A63E] px-3 md:px-6 py-[5px] md:py-[10px] rounded-3xl">
@@ -52,19 +52,19 @@
                             <img
                             src="./assets/emergency.png"
                             alt=""
-                            class="rounded-2xl bg-[#FFE3E2] w-16 p-4 mt-8" />
+                            class="rounded-2xl bg-[#FFE3E2] w-16 p-4 mt-8"/>
                         </figure>
-                        <i class="fa-regular fa-heart pt-12 pe-14 text-2xl"></i>
+                        <i id="heart-icon" class="fa-regular fa-heart pt-12 pe-14 text-2xl heartcount"></i>
                     </div>
                     <div class="card-body">
                         <h1 class="text-2xl font-bold">জাতীয় জরুরি সেবা</h1>
-                        <p class="text-[#404040] text-lg">National Emergency</p>
+                        <p class="text-[#404040] text-lg">National Emergency Service</p>
                         <h1 class="text-4xl font-bold mt-4">999</h1>
                         <p class="text-[#5C5C5C] bg-[#F2F2F2] w-fit px-4 py-2 rounded-2xl text-base">সার্বজনীন</p>
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
                         <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
-                        <button onclick="showBDTime()" class="btn bg-[#00A63E] text-white rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button onclick="showBDTime()" class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
             </section>
@@ -78,7 +78,7 @@
                             alt=""
                             class="rounded-2xl bg-[#DFEFFF] w-16 p-4 mt-8" />
                         </figure>
-                        <i class="fa-regular fa-heart pt-12 pe-14 text-2xl"></i>
+                        <i id="heart-icon2" class="fa-regular fa-heart pt-12 pe-14 text-2xl heartcount"></i>
                     </div>
                     <div class="card-body">
                         <h1 class="text-2xl font-bold">পুলিশ</h1>
@@ -88,7 +88,7 @@
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
                         <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
-                        <button class="btn bg-[#00A63E] text-white rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
             </section>
@@ -102,7 +102,7 @@
                             alt=""
                             class="rounded-2xl bg-[#FFE3E2] w-16 p-4 mt-8" />
                         </figure>
-                        <i class="fa-regular fa-heart pt-12 pe-14 text-2xl"></i>
+                        <i class="fa-regular fa-heart pt-12 pe-14 text-2xl heartcount"></i>
                     </div>
                     <div class="card-body">
                         <h1 class="text-2xl font-bold">ফায়ার সার্ভিস</h1>
@@ -112,7 +112,7 @@
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
                         <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
-                        <button class="btn bg-[#00A63E] text-white rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
             </section>
@@ -126,7 +126,7 @@
                             alt=""
                             class="rounded-2xl bg-[#FFE3E2] w-16 p-4 mt-8" />
                         </figure>
-                        <i class="fa-regular fa-heart pt-12 pe-14 text-2xl"></i>
+                        <i class="fa-regular fa-heart pt-12 pe-14 text-2xl heartcount"></i>
                     </div>
                     <div class="card-body">
                         <h1 class="text-2xl font-bold">অ্যাম্বুলেন্স</h1>
@@ -136,7 +136,7 @@
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
                         <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
-                        <button class="btn bg-[#00A63E] text-white rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
             </section>
@@ -150,7 +150,7 @@
                             alt=""
                             class="rounded-2xl bg-[#FFE3E2] w-16 p-4 mt-8" />
                         </figure>
-                        <i class="fa-regular fa-heart pt-12 pe-14 text-2xl"></i>
+                        <i class="fa-regular fa-heart pt-12 pe-14 text-2xl heartcount"></i>
                     </div>
                     <div class="card-body">
                         <h1 class="text-2xl font-bold">নারী ও শিশু সহায়তা</h1>
@@ -160,7 +160,7 @@
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
                         <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
-                        <button class="btn bg-[#00A63E] text-white rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
             </section>
@@ -174,7 +174,7 @@
                             alt=""
                             class="rounded-2xl bg-[#FFE3E2] w-16 p-4 mt-8" />
                         </figure>
-                        <i class="fa-regular fa-heart pt-12 pe-14 text-2xl"></i>
+                        <i class="fa-regular fa-heart pt-12 pe-14 text-2xl heartcount"></i>
                     </div>
                     <div class="card-body">
                         <h1 class="text-2xl font-bold">দুদক</h1>
@@ -184,7 +184,7 @@
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
                         <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
-                        <button class="btn bg-[#00A63E] text-white rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
             </section>
@@ -198,7 +198,7 @@
                             alt=""
                             class="rounded-2xl bg-[#FFE3E2] w-16 p-4 mt-8" />
                         </figure>
-                        <i class="fa-regular fa-heart pt-12 pe-14 text-2xl"></i>
+                        <i class="fa-regular fa-heart pt-12 pe-14 text-2xl heartcount"></i>
                     </div>
                     <div class="card-body">
                         <h1 class="text-2xl font-bold">বিদ্যুৎ বিভ্রাট</h1>
@@ -208,7 +208,7 @@
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
                         <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
-                        <button class="btn bg-[#00A63E] text-white rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
             </section>
@@ -222,7 +222,7 @@
                             alt=""
                             class="rounded-2xl bg-[#ffe2f7] w-16 p-4 mt-8" />
                         </figure>
-                        <i class="fa-regular fa-heart pt-12 pe-14 text-2xl"></i>
+                        <i class="fa-regular fa-heart pt-12 pe-14 text-2xl heartcount"></i>
                     </div>
                     <div class="card-body">
                         <h1 class="text-2xl font-bold">ব্র্যাক</h1>
@@ -232,7 +232,7 @@
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
                         <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
-                        <button class="btn bg-[#00A63E] text-white rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
             </section>
@@ -246,7 +246,7 @@
                             alt=""
                             class="rounded-2xl bg-[#fff8e2] w-16 p-4 mt-8" />
                         </figure>
-                        <i class="fa-regular fa-heart pt-12 pe-14 text-2xl"></i>
+                        <i class="fa-regular fa-heart pt-12 pe-14 text-2xl heartcount"></i>
                     </div>
                     <div class="card-body">
                         <h1 class="text-2xl font-bold">বাংলাদেশ রেলওয়ে</h1>
@@ -256,7 +256,7 @@
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
                         <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
-                        <button class="btn bg-[#00A63E] text-white rounded-lg"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
             </section>
