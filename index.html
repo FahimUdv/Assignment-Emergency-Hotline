@@ -64,7 +64,7 @@
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
                         <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
-                        <button onclick="showBDTime()" class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
             </section>
@@ -267,16 +267,18 @@
             <div class="card bg-base-100 shadow-lg rounded-xl">
                 <div class="flex justify-between p-4 md:p-6 items-center">
                     <h1 class="font-semibold text-lg md:text-xl"><i class="fa-regular fa-clock"></i> Call History</h1>
-                    <button class="bg-[#00A63E] px-4 py-[6px] md:px-6 md:py-[10px] rounded-3xl text-white font-semibold">Clear</button>
+                    <button id="clear-btn" class="bg-[#00A63E] px-4 py-[6px] md:px-6 md:py-[10px] rounded-3xl text-white font-semibold">Clear</button>
                 </div>
 
-                <div class="flex justify-between mx-2 md:mx-6 mb-6 px-4 py-2 items-center bg-[#FAFAFA] rounded-lg">
+                <!-- <div id="call-history-container"></div> -->
+
+                <div id="call-history-container" class="bg-[#FAFAFA] rounded-lg">
                     <div>
-                        <p class="text-base md:text-lg py-1 font-semibold">জাতীয় জরুরি সেবা</p>
-                        <p class="md:text-lg">999</p>
+                        <p id="call-history-title" class="text-base md:text-lg py-1 font-semibold"></p>
+                        <p id="call-history-num" class="md:text-lg"></p>
                     </div>
                     <div>
-                        <p id="bdtime" class="font-semibold text-lg me-2"></p>
+                        <p id="call-time" class="font-semibold text-lg me-2"></p>
                     </div>
                 </div>
             </div>
@@ -291,12 +293,5 @@
 
 
     <script src="./script/script.js"></script>
-    <script>
-        function showBDTime() {
-            let now = new Date();
-            let bdTime = now.toLocaleTimeString("en-US", { timeZone: "Asia/Dhaka" });
-            document.getElementById("bdtime").innerText = bdTime;
-        }
-    </script>
 </body>
 </html>
