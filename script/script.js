@@ -73,25 +73,25 @@ document.getElementById("clear-btn").addEventListener("click", function(){
 // Copy Button Functionalities ----------
 
 document.addEventListener('DOMContentLoaded', function () {
-    var copyButtons = document.querySelectorAll('button.btn.border-2');
+    let copyButtons = document.querySelectorAll('button.btn.border-2');
 
-    for (var i = 0; i < copyButtons.length; i++) {
+    for (let i = 0; i < copyButtons.length; i++) {
         copyButtons[i].addEventListener('click', function (event) {
-        var btn = event.currentTarget;
-            var card = btn.closest('.card');
+        let btn = event.currentTarget;
+            let card = btn.closest('.card');
 
             if (!card) {
                 alert('Card not found.');
                 return;
             }
 
-        var phoneElem = card.querySelector('.phone-number') || card.querySelector('h1.text-4xl');
+        let phoneElem = card.querySelector('.phone-number') || card.querySelector('h1.text-4xl');
         if (!phoneElem) {
             alert('No phone number found.');
             return;
         }
 
-        var phoneNumber = phoneElem.innerText.trim();
+        let phoneNumber = phoneElem.innerText.trim();
 
         if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(phoneNumber).then(function () {
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function fallbackCopy(text) {
-        var ta = document.createElement('textarea');
+        let ta = document.createElement('textarea');
         ta.value = text;
         ta.style.position = 'fixed';
         ta.style.left = '-9999px';
