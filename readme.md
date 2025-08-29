@@ -4,7 +4,9 @@ Assignment: 🚦 Emergency Contact 🚦
 
 1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
 
-Ans:🚀 getElementById()
+Ans:
+
+🚀 getElementById()
 
 The getElementById() method is used when we want to select a single element by its unique ID in the DOM. IDs should be unique on a page. It always returns only one element. It is the fastest DOM selection method and is ideal when we know the exact ID of the element we need.
 
@@ -23,7 +25,9 @@ The querySelectorAll() method returns a static NodeList of all elements that mat
 
 2. How do you **create and insert a new element into the DOM**?
 
-Ans: 💡 Step: 01
+Ans: 
+
+💡 Step: 01
 First I need to create a div container in my HTML:
 <div id="container"></div>
 
@@ -55,5 +59,32 @@ container.appendChild(newDiv);
 
 
 3. What is **Event Bubbling** and how does it work?
+
+Ans:
+
+🎈 **Event Bubbling** is a concept in JS where an event starts from the target element and bubbles up to its parent element and then the parent's parent element and so on, untill it gets the root.
+
+Example: 
+
+<div id="parent" style="padding:20px; background:#ddd;">
+  Parent
+  <button id="child">Click Me</button>
+</div>
+
+If I click on the "Click Me" button, it will be assumed as child element. So, the child button is clicked. Then the event bubbles up and the parent "div" is clicked. Then finally the parent of the "parent div" which is <body></body> is clicked.
+
+
 4. What is **Event Delegation** in JavaScript? Why is it useful?
+
+Ans: **Event Delegation** uses one parent event listener to handle events for multiple children. In this case, 🎈 **Event Bubbling** is used.
+
+It is useful. Because-
+🚩 Performance: Reduces memory usage
+🚩 Dynamic Elements: If elements are added later, it will work.
+🚩 Clean Code: Easier to manage. 
+
+
+
 5. What is the difference between **preventDefault() and stopPropagation()** methods?
+
+Ans: 
