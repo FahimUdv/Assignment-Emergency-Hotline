@@ -69,3 +69,60 @@ for(let callBtn of callBtns){
 document.getElementById("clear-btn").addEventListener("click", function(){
     document.getElementById("call-history-container").innerHTML = "";
 });
+
+// Copy Button Functionalities ----------
+
+document.addEventListener('DOMContentLoaded', function () {
+    var copyButtons = document.querySelectorAll('button.btn.border-2');
+
+    for (var i = 0; i < copyButtons.length; i++) {
+        copyButtons[i].addEventListener('click', function (event) {
+        var btn = event.currentTarget;
+            var card = btn.closest('.card');
+
+            if (!card) {
+                alert('Card not found.');
+                return;
+            }
+
+        var phoneElem = card.querySelector('.phone-number') || card.querySelector('h1.text-4xl');
+        if (!phoneElem) {
+            alert('No phone number found.');
+            return;
+        }
+
+        var phoneNumber = phoneElem.innerText.trim();
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(phoneNumber).then(function () {
+            alert('📝 কপি করা হয়েছেঃ  ' + phoneNumber);
+
+            let copyCount = document.getElementById("copy-count").innerText;
+            copyCount = parseInt(copyCount) + 1;
+            document.getElementById("copy-count").innerText = copyCount + " Copy";
+
+            }).catch(function () {
+                fallbackCopy(phoneNumber);
+            });
+        } else {
+            fallbackCopy(phoneNumber);
+        }
+        });
+    }
+
+    function fallbackCopy(text) {
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+            document.execCommand('copy');
+            alert('Copied: ' + text);
+        } catch (err) {
+            alert('Copy failed');
+        }
+        document.body.removeChild(ta);
+    }
+});

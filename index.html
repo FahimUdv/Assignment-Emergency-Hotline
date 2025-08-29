@@ -27,7 +27,7 @@
                     <img src="./assets/coin.png" class="w-6 md:w-8 ps-2" alt="">
                 </div>
                 <div class="flex items-center bg-[#00A63E] px-3 md:px-6 py-[5px] md:py-[10px] rounded-3xl">
-                    <h2 class=" text-white font-semibold text-sm md:text-lg">0<span> Copy</span></h2>
+                    <h2 id="copy-count" class=" text-white font-semibold text-sm md:text-lg">0<span> Copy</span></h2>
                 </div>
             </div>
         </div>
@@ -59,12 +59,12 @@
                     <div class="card-body">
                         <h1 class="text-2xl font-bold">জাতীয় জরুরি সেবা</h1>
                         <p class="text-[#404040] text-lg">National Emergency Service</p>
-                        <h1 class="text-4xl font-bold mt-4">999</h1>
+                        <h1 class="phone-number text-4xl font-bold mt-4">999</h1>
                         <p class="text-[#5C5C5C] bg-[#F2F2F2] w-fit px-4 py-2 rounded-2xl text-base">সার্বজনীন</p>
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
-                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
-                        <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
+                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:text-[#f6f6f6] hover:bg-[#142817] hover:border-[#142817]"><i class="fa-regular fa-copy"></i>Copy</button>
+                        <button id="copyBtn" class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
             </section>
@@ -87,7 +87,7 @@
                         <p class="text-[#5C5C5C] bg-[#F2F2F2] w-fit px-4 py-2 rounded-2xl text-base">পুলিশ</p>
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
-                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
+                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:text-[#f6f6f6] hover:bg-[#142817] hover:border-[#142817]"><i class="fa-regular fa-copy"></i>Copy</button>
                         <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                         <p class="text-[#5C5C5C] bg-[#F2F2F2] w-fit px-4 py-2 rounded-2xl text-base">ফায়ার</p>
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
-                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
+                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:text-[#f6f6f6] hover:bg-[#142817] hover:border-[#142817]"><i class="fa-regular fa-copy"></i>Copy</button>
                         <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                         <p class="text-[#5C5C5C] bg-[#F2F2F2] w-fit px-4 py-2 rounded-2xl text-base">স্বাস্থ্য</p>
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
-                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
+                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:text-[#f6f6f6] hover:bg-[#142817] hover:border-[#142817]"><i class="fa-regular fa-copy"></i>Copy</button>
                         <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
@@ -159,7 +159,7 @@
                         <p class="text-[#5C5C5C] bg-[#F2F2F2] w-fit px-4 py-2 rounded-2xl text-base">সহায়তা</p>
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
-                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
+                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:text-[#f6f6f6] hover:bg-[#142817] hover:border-[#142817]"><i class="fa-regular fa-copy"></i>Copy</button>
                         <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
@@ -183,7 +183,7 @@
                         <p class="text-[#5C5C5C] bg-[#F2F2F2] w-fit px-4 py-2 rounded-2xl text-base">সরকারি</p>
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
-                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
+                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:text-[#f6f6f6] hover:bg-[#142817] hover:border-[#142817]"><i class="fa-regular fa-copy"></i>Copy</button>
                         <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
@@ -207,7 +207,7 @@
                         <p class="text-[#5C5C5C] bg-[#F2F2F2] w-fit px-4 py-2 rounded-2xl text-base">বিদ্যুৎ</p>
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
-                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
+                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:text-[#f6f6f6] hover:bg-[#142817] hover:border-[#142817]"><i class="fa-regular fa-copy"></i>Copy</button>
                         <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
@@ -231,7 +231,7 @@
                         <p class="text-[#5C5C5C] bg-[#F2F2F2] w-fit px-4 py-2 rounded-2xl text-base">এনজিও</p>
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
-                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
+                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:text-[#f6f6f6] hover:bg-[#142817] hover:border-[#142817]"><i class="fa-regular fa-copy"></i>Copy</button>
                         <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
@@ -255,7 +255,7 @@
                         <p class="text-[#5C5C5C] bg-[#F2F2F2] w-fit px-4 py-2 rounded-2xl text-base">পরিবহন</p>
                     </div>
                     <div class="grid grid-cols-2 gap-4 px-8 pb-8">
-                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:bg-[#eafdf1] hover:border-[#c2efc9]"><i class="fa-regular fa-copy"></i>Copy</button>
+                        <button class="btn border-2 border-[#c8c8c8] py-2 rounded-lg hover:text-[#f6f6f6] hover:bg-[#142817] hover:border-[#142817]"><i class="fa-regular fa-copy"></i>Copy</button>
                         <button class="btn bg-[#00A63E] text-white rounded-lg call-btn"><i class="fa-solid fa-phone"></i>Call</button>
                     </div>
                 </div>
@@ -272,7 +272,7 @@
 
                 <!-- <div id="call-history-container"></div> -->
 
-                <div id="call-history-container" class="bg-[#FAFAFA] rounded-lg">
+                <div id="call-history-container" class="bg-[#FAFAFA] rounded-lg mx-2 md:mx-6 mb-2 md:mb-4">
                     <div>
                         <p id="call-history-title" class="text-base md:text-lg py-1 font-semibold"></p>
                         <p id="call-history-num" class="md:text-lg"></p>
