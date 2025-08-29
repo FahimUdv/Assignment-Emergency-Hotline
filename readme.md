@@ -1,6 +1,4 @@
-Assignment: 🚦 Emergency Contact 🚦
-
-### 6. Answer the following questions clearly:
+### Assignment: 🚦 Emergency Contact 🚦
 
 1. What is the difference between **getElementById, getElementsByClassName, and querySelector / querySelectorAll**?
 
@@ -88,3 +86,7 @@ It is useful. Because-
 5. What is the difference between **preventDefault() and stopPropagation()** methods?
 
 Ans: 
+
+🎢 preventDefault() - method prevents the default browser behavior for an event. It doesn't stop bubbling. The event will still propagate up the DOM.
+
+➡️ stopPropagation() - method doesn't affect default browser behavior. It stops the event bubbling. So, the event will not go up to the parent elements.
